@@ -64,6 +64,8 @@ const adicionarToken = async (usuario, token) => {
 }
 const loginDeUsuario = async (usuario, senha) => {
     const client = await main();
+    console.log("USUARIO: "+usuario)
+    console.log("SENHA: "+senha)
     let response = { alert: 'red', message: "Dados Incorretos" }
     try {
         const resultado = await client.db("otaku-shop").collection("usuarios").findOne({ usuario: usuario })
