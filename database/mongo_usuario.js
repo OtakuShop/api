@@ -33,6 +33,7 @@ const buscaDeCampo = async (field) => {
     let response = false;
     try {
         const resultado = await client.db("otaku-shop").collection("usuarios").findOne(field)
+        console.log("ESSA DESGRAÇA AQUI TA DANDO ERRO: "+ JSON.stringify(resultado))
         if (typeof resultado == 'object') {
             response = true;
         }
